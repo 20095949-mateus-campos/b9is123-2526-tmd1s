@@ -3,8 +3,18 @@
         <script src="ex1.js"></script>
     </head>
     <body>
-        <input type="text" id="weight">
-        <!--//replace button onclick with call to check function.-->
-        <button onclick="checkBaggageWeight(parseInt(document.getElementById('weight').value))">Check Baggage Weight</button>
+        <p id="scale">
+            <input type="text" id="baggageWeight">
+            <button onclick="checkBaggageWeight(parseInt(document.getElementById('baggageWeight').value))">Check Baggage Weight</button>
+        </p>
+
+        <p id="remove" hidden>
+            <input type="text" id="weightToRemove">
+            <button onclick="removeSomeWeight(parseInt(document.getElementById('weightToRemove').value))">Remove Some Weight</button>
+        </p>
+
+        <p id="message">
+          Please, place your baggage on the scale and press the button to check baggage weith.  
+        </p>
     </body>
 </html>

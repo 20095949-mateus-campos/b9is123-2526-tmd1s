@@ -6,18 +6,156 @@
         <title>B9IS123_2526_TMD1S Class Exercises</title>
     </head>
     <body>
-        <p id="scale">
-            <input type="text" id="baggageWeight">
-            <button onclick="checkBaggageWeight(parseInt(document.getElementById('baggageWeight').value))">Check Baggage Weight</button>
-        </p>
-
-        <p id="remove" hidden>
-            <input type="text" id="weightToRemove">
-            <button onclick="removeSomeWeight(parseInt(document.getElementById('weightToRemove').value))">Remove Some Weight</button>
-        </p>
-
-        <p id="message">
-          Please, place your baggage on the scale and press the button to check baggage weith.  
-        </p>
+        <header id="details">
+            <h1>B9IS123_2526_TMD1S Class Exercises</h1>
+            <h2>Details</h2>
+            <table>
+                <tbody>
+                    <tr>
+                        <td>Module Title:</td>
+                        <td>Programming for Information Systems</td>
+                    </tr>
+                    <tr>
+                        <td>Module Code:</td>
+                        <td>B9IS123</td>
+                    </tr>
+                    <tr>
+                        <td>Programme:</td>
+                        <td>MSc in IS & Computing</td>
+                    </tr>
+                    <tr>
+                        <td>Delivery Mode:</td>
+                        <td>On Campus</td>
+                    </tr>
+                    <tr>
+                        <td>Lecturer Name:</td>
+                        <td>Paul Laird</td>
+                    </tr>
+                    <tr>
+                        <td>Lecturer Email:</td>
+                        <td><a href="mailto:paul.laird@dbs.ie">paul.laird@dbs.ie</a></td>
+                    </tr>
+                    <tr>
+                        <td>Student Name:</td>
+                        <td>Mateus Campos</td>
+                    </tr>
+                    <tr>
+                        <td>Student ID Number:</td>
+                        <td>20095949</td>
+                    </tr>
+                    <tr>
+                        <td>Student Email:</td>
+                        <td><a href="mailto:20095949@mydbs.ie">20095949@mydbs.ie</a></td>
+                    </tr>
+                    <tr>
+                        <td>GitHub Repository:</td>
+                        <td><a href="https://github.com/20095949-mateus-campos/b9is123-2526-tmd1s" target="_blank">20095949-mateus-campos/b9is123-2526-tmd1s</a></td>
+                    </tr>
+                    <tr>
+                        <td>Last Updated On:</td>
+                        <td>4 October 2025</td>
+                    </tr>
+                </tbody>
+            </table>
+        </header>
+        <section id="contents">
+            <h2>Contents</h2>
+            <ol>
+                <li>
+                    <a href="#exercises">Exercises</a>
+                    <ol>
+                        <li><a href="#exercise-1">Exercise 1</a></li>
+                        <li><a href="#exercise-2">Exercise 2</a></li>
+                        <li><a href="#exercise-3">Exercise 3</a></li>
+                    </ol>
+                </li>
+            </ol>
+        </section>
+        <section id="exercises">
+            <h2>Exercises</h2>
+            <article id="exercise-1">
+                <h3>Exercise 1</h3>
+                <p>An airport scale system that alerts when baggage weight exceeds the maximum weight allowed and prompts for weight removal:</p>
+                <fieldset id="exercise-1-a">
+                    <legend>A&#41 Inform maximum weight and baggage weight:</legend>
+                    <label for="inputMaxWeight">Max:</label>
+                    <input type="number" min="0" id="inputMaxWeight" placeholder="weight in kg" oninput="toggleButton()">
+                    <label for="inputBaggageWeight">Baggage:</label>
+                    <input type="number" min="0" id="inputBaggageWeight" placeholder="weight in kg" oninput="toggleButton()">
+                    <button id="buttonCheckWeight" onclick="checkWeight()" disabled>Check</button>
+                    <button id="buttonResetScale" onclick="resetScale()">Reset</button>
+                    <div id="divRemove" hidden>
+                        <br>
+                        <label for="inputRemoveWeight">Remove:</label>
+                        <input type="number" min="0" id="inputRemoveWeight" placeholder="weight in kg" oninput="toggleButton()">
+                        <button id="buttonRemoveWeight" onclick="removeWeight()" disabled>Remove</button>
+                    </div>
+                </fieldset>
+            </article>
+            <article id="exercise-2">
+                <h3>Exercise 2</h3>
+                <p>If we list all the natural numbers below 10 that are multiples of 3 or 5, we get 3, 5, 6 and 9. The sum of these multiples is 23 (from <a href="https://projecteuler.net/problem=1" target="_blank">Project Euler #1</a>). Now:</p>
+                <fieldset id="exercise-2-a">
+                    <legend>A&#41 Find the sum of all the multiples of 3 or 5 below 1000:</legend>
+                    <button onclick="euler1()">Solve</button>
+                </fieldset>
+                <br>
+                <fieldset id="exercise-2-b">
+                    <legend>B&#41 Find the sum of all the multiples of a or b below n:</legend>
+                    <label for="a">a:</label>
+                    <input type="number" min="0" id="inputAEx2B" placeholder="natural number">
+                    <label for="b">b:</label>
+                    <input type="number" min="0" id="inputBEx2B" placeholder="natural number">
+                    <label for="n">n:</label>
+                    <input type="number" min="0" id="inputNEx2B" placeholder="natural number">
+                    <button onclick="eulerCustom(parseInt(inputAEx2B.value), parseInt(inputBEx2B.value), parseInt(inputNEx2B.value))">Solve</button>
+                </fieldset>
+            </article>
+            <article id="exercise-3">
+                <h3>Exercise 3</h3>
+                <p>Similarly to <a href="#exercise-2">Exercise 2</a>, now:</p>
+                <fieldset id="exercise-3-a">
+                    <legend>A&#41 Find the sum of all the multiples of a or b in l:</legend>
+                    <label for="a">a:</label>
+                    <input type="number" min="0" id="inputAEx3A" placeholder="natural number">
+                    <label for="b">b:</label>
+                    <input type="number" min="0" id="inputBEx3A" placeholder="natural number">
+                    <label for="l">l:</label>
+                    <input type="text" min="0" id="inputLEx3A" placeholder="comma-separated list of natural numbers">
+                    <button onclick="listEuler1(parseInt(inputAEx3A.value), parseInt(inputBEx3A.value), inputLEx3A.value.split(',').map(x => parseInt(x)))">Solve</button>
+                </fieldset>
+                <br>
+                <fieldset id="exercise-3-b">
+                    <legend>B&#41 Find the sum of all the numbers in l that are multiples of numbers in a, where a has exactly two numbers:</legend>
+                    <label for="a">a:</label>
+                    <input type="text" id="inputAEx3B" placeholder="comma-separated list of natural numbers">
+                    <label for="l">l:</label>
+                    <input type="text" id="inputLEx3B" placeholder="comma-separated list of natural numbers">
+                    <button onclick="listEuler2(inputAEx3B.value.split(',').slice(0, 2).map(x => parseInt(x)), inputLEx3B.value.split(',').map(x => parseInt(x)))">Solve</button>
+                </fieldset>
+                <br>
+                <fieldset id="exercise-3-c">
+                    <legend>C&#41 Find the sum of all the numbers in l that are multiples of numbers in a:</legend>
+                    <label for="a">a:</label>
+                    <input type="text" id="inputAEx3C" placeholder="comma-separated list of natural numbers">
+                    <label for="l">l:</label>
+                    <input type="text" id="inputLEx3C" placeholder="comma-separated list of natural numbers">
+                    <button onclick="listEuler3(inputAEx3C.value.split(',').map(x => parseInt(x)), inputLEx3C.value.split(',').map(x => parseInt(x)))">Solve</button>
+                </fieldset>
+            </article>
+        </section>
+        <footer>
+            <h2>Quick Access</h2>
+            <ul>
+                <li><a href="#details">Details</a></li>
+                <li><a href="#contents">Contents</a></li>
+                <li><a href="#exercises">Exercises</a></li>
+            </ul>
+        </footer>
+        <section id="scripts">
+            <script src="./js/ex1.js"></script>
+            <script src="./js/ex2.js"></script>
+            <script src="./js/ex3.js"></script>
+        </section>
     </body>
 </html>

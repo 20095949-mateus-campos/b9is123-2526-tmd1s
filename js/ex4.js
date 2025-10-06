@@ -1,8 +1,4 @@
-function listEuler4(a, l) {
-    sum = a.
-        map(x => l.filter(y => y % x == 0)).
-        flat().
-        reduce((sum, x) => sum + x, 0)
+// ideally would be imported from a business rules script, but cannot be done without a server due to CORS violation. Solution was to link businessRules.js to the HTML directly.
+// import {euler} from "./businessRules"
 
-    alert(`${sum} : ${a.join(" ")} : ${l.join(" ")}`)
-}
+let listEuler4 = (a, l) => alert(`${euler(a, l)} : ${a.join(" ")} : ${l.join(" ")}`)

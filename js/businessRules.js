@@ -1,3 +1,10 @@
+function parseInputs(inputs) {
+    return inputs.map(input => input.value
+        .replaceAll(" ", ",")
+        .split(",")
+        .map(x => parseInt(x)))
+}
+
 function euler(factors, multiples) {
     return factors.
             map(factor => multiples.filter(multiple => multiple % factor == 0)).

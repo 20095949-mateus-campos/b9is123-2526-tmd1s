@@ -1,5 +1,5 @@
 // ideally would be imported from a business rules script, but cannot be done without a server due to CORS violation. Solution was to link businessRules.js to the HTML directly.
-// import {euler} from "./businessRules"
+// import {parseInputs, euler, prettyList} from "./businessRules"
 
 let listEuler1 = (a, b, l) => alert(`The sum of all the multiples of ${a} or ${b} in ${l.slice(0, l.length-1).join(", ") + " and " + l[l.length-1]} is ${euler([a, b], l)}.`)
 

@@ -4,4 +4,5 @@
 function euler4a(a, l) {
     [a, l] = parseInputs([a, l])
 
-let listEuler4 = (a, l) => alert(`${euler(a, l)} : ${a.join(" ")} : ${l.join(" ")}`)
+    alert(`${euler(a, l)} : ${a.join(" ")} : ${l.join(" ")}`)
+}

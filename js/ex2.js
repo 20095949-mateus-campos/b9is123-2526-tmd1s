@@ -12,7 +12,9 @@ function euler2a(a = 3, b = 5, n = 1000) {
             sum += i
         }
     }
-    alert(`The sum of all the multiples of ${a} or ${b} below ${n} is ${sum}.`)
+    */
+
+    alert(`The sum of all the multiples of ${a} or ${b} below ${n} is ${euler([a, b], Array(n - 1).fill().map((_, i) => i + 1))}.`)
 }
 
-let eulerCustom = (a, b, n) => euler1(a, b, n)
+let euler2b = (a, b, n) => euler2a(...(parseInputs([a, b, n]).flat()))

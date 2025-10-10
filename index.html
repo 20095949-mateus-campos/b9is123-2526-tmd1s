@@ -99,7 +99,7 @@
                 <p>If we list all the natural numbers below 10 that are multiples of 3 or 5, we get 3, 5, 6 and 9. The sum of these multiples is 23 (from <a href="https://projecteuler.net/problem=1" target="_blank">Project Euler #1</a>). Now:</p>
                 <fieldset id="exercise-2-a">
                     <legend>A&#41 Find the sum of all the multiples of 3 or 5 below 1000:</legend>
-                    <button onclick="euler1()">Solve</button>
+                    <button onclick="euler2a()">Solve</button>
                 </fieldset>
                 <br>
                 <fieldset id="exercise-2-b">
@@ -110,7 +110,7 @@
                     <input type="number" min="0" id="inputBEx2B" placeholder="natural number">
                     <label for="n">n:</label>
                     <input type="number" min="0" id="inputNEx2B" placeholder="natural number">
-                    <button onclick="eulerCustom(parseInt(inputAEx2B.value), parseInt(inputBEx2B.value), parseInt(inputNEx2B.value))">Solve</button>
+                    <button onclick="euler2b(inputAEx2B, inputBEx2B, inputNEx2B)">Solve</button>
                 </fieldset>
             </article>
             <article id="exercise-3">
@@ -124,7 +124,7 @@
                     <input type="number" min="0" id="inputBEx3A" placeholder="natural number">
                     <label for="l">l:</label>
                     <input type="text" min="0" id="inputLEx3A" placeholder="comma-separated list of natural numbers">
-                    <button onclick="listEuler1(parseInt(inputAEx3A.value), parseInt(inputBEx3A.value), inputLEx3A.value.split(',').map(x => parseInt(x)))">Solve</button>
+                    <button onclick="euler3a(inputAEx3A, inputBEx3A, inputLEx3A)">Solve</button>
                 </fieldset>
                 <br>
                 <fieldset id="exercise-3-b">
@@ -133,7 +133,7 @@
                     <input type="text" id="inputAEx3B" placeholder="comma-separated list of natural numbers">
                     <label for="l">l:</label>
                     <input type="text" id="inputLEx3B" placeholder="comma-separated list of natural numbers">
-                    <button onclick="listEuler2(inputAEx3B.value.split(',').slice(0, 2).map(x => parseInt(x)), inputLEx3B.value.split(',').map(x => parseInt(x)))">Solve</button>
+                    <button onclick="euler3b(inputAEx3B, inputLEx3B)">Solve</button>
                 </fieldset>
                 <br>
                 <fieldset id="exercise-3-c">
@@ -142,7 +142,7 @@
                     <input type="text" id="inputAEx3C" placeholder="comma-separated list of natural numbers">
                     <label for="l">l:</label>
                     <input type="text" id="inputLEx3C" placeholder="comma-separated list of natural numbers">
-                    <button onclick="listEuler3(inputAEx3C.value.split(',').map(x => parseInt(x)), inputLEx3C.value.split(',').map(x => parseInt(x)))">Solve</button>
+                    <button onclick="euler3c(inputAEx3C, inputLEx3C)">Solve</button>
                 </fieldset>
             </article>
             <article id="exercise-4">

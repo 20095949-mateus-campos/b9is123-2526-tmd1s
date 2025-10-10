@@ -25,4 +25,4 @@ function prettyList(list) {
 }
 
 // ideally would be exported as modules, but cannot be done without a server due to CORS violation. Solution was to link businessRules.js to the HTML directly.
-// export {euler}
+// export {parseInputs, euler, prettyList}
